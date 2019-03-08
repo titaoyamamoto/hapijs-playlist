@@ -1,0 +1,29 @@
+{
+  "name": "hapijs-playlist",
+  "version": "1.0.0",
+  "description": "All course files for the [HapiJS](https://hapijs.com) tutorial.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/titaoyamamoto/hapijs-playlist.git"
+  },
+  "keywords": [
+    "api",
+    "hapijs",
+    "js",
+    "javascript"
+  ],
+  "author": "Titao Yamamoto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/titaoyamamoto/hapijs-playlist/issues"
+  },
+  "homepage": "https://github.com/titaoyamamoto/hapijs-playlist#readme",
+  "dependencies": {
+    "hapi": "^18.1.0"
+  }
+}
