@@ -1,33 +1,31 @@
 const Hapi = require('hapi');
 
-// Create a server with a host and port
-const server = Hapi.server({
-    host: 'localhost',
-    port: 3000
-});
+(async () => {
+    
+    const server = await new Hapi.server({
+        host: 'localhost',
+        port: 3000
+    });
 
-// Add the route
-server.route({
-    method: 'GET',
-    path: '/hello',
-    handler: function (request, h) {
+    // Add the route
+    server.route({
+        method: 'GET',
+        path: '/hello',
+        handler: function (request, h) {
 
-        return 'hello world';
-    }
-});
+            return h.response({
+                message: "hello world"
+            }).code(200);
 
-// Start the server
-const start = async function () {
+        }
+    });
 
     try {
         await server.start();
+        console.log(`Server running at: ${server.info.uri}`);
     }
     catch (err) {
         console.log(err);
-        process.exit(1);
     }
 
-    console.log(`Server running at: ${server.info.uri}`);
-};
-
-start();
+})();
